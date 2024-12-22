@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VIVIAN JIMENEZ</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styleProductos.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+/>
+  <head>
+  
+<body>
+  <!-- Header and Navigation -->
+  <header>
+    <div class="logo">
+      <h1>VIVIAN JIMENEZ</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">INICIO</a></li>
+        <li><a href="#">PRODUCTOS</a></li>
+        <li><a href="#">QUIENES SOMOS</a></li>
+        <li><a href="#">CONTACTENOS</a></li>
+      </ul>
+    </nav>
+
+<!-- Iconos en la barra superior -->
+<div class="icons">
+  <a href="#" class="icon"><i class="fas fa-globe"></i></a>
+  <a href="#" class="icon"><i class="fas fa-user"></i></a>
+  <a href="#" class="icon"><i class="fas fa-heart"></i></a>
+  <a href="javascript:void(0)" class="icon" onclick="toggleCart()">
+    <i class="fas fa-shopping-bag"></i>
+    <span class="cart-count" id="cart-count">0</span> <!-- Contador de productos en el carrito -->
+  </a>
+</div>
+
+<!-- Popup del carrito -->
+<div id="cart-popup" class="cart-popup">
+  <div class="cart-popup-content">
+    <h3>Carrito de compras</h3>
+    <ul class="cart-items-list" id="cart-items-list">
+      <!-- Los productos añadidos se mostrarán aquí -->
+    </ul>
+    <div class="cart-total">
+      Total: $<span id="cart-total">0.00</span>
+    </div>
+    <div class="cart-actions">
+      <button class="checkout-btn" onclick="checkout()">Proceder al pago</button>
+      <button class="clear-cart-btn" onclick="clearCart()">Vaciar carrito</button>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <section class="intro">
+      <h2>VIVIAN JIMENEZ</h2>
+      <p>
+        Our medical skin care range contains active ingredients in concentrations close to the pharmaceutical level. The skin needs a gradual adaptation and correct use is crucial for the result.
+      </p>
+    </section>
+
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="banner prueba 1.jpg" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Slide 1</h5>
+            <p>Description of Slide 1</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="prueba 2 carrusel.jpg" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Slide 2</h5>
+            <p>Description of Slide 2</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="prueba 3 carrusel.png" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Slide 3</h5>
+            <p>Description of Slide 3</p>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    
+
+
+
+    <!-- Sidebar and Products -->
+    <section class="container">
+      <aside class="sidebar">
+        <h3>VIVIAN JIMENEZ</h3>
+        <ul>
+          <li><input type="radio" name="filter"> LNDA+LAB</li>
+          <li><input type="radio" name="filter"> Self-tanning</li>
+          <li><input type="radio" name="filter"> Skin Boosters</li>
+          <li><input type="radio" name="filter"> Face cream</li>
+          <li><input type="radio" name="filter"> Body care</li>
+        </ul>
+      </aside>
+
+      <div class="products">
+        <div class="product">
+          <div class="discount">-30%</div>
+          <img src="1. power clean.jpg" alt="Power Cleanse" class="product-image main-img">
+          <img src="va1.jpg" alt="Power Cleanse" class="product-image hover-img">
+          <h4>POWER CLEANSE</h4>
+          <p>Provides moisture, reduces pores, clinically tested</p>
+          <span class="price">$20.000 COP</span>
+          <button class="add-to-cart" onclick="addToCart('Power Cleanse', 20000)">Añadir al carrito</button>
+        </div>
+      
+        <div class="product">
+          <div class="discount">-10%</div>
+          <img src="2. repair.jpg" alt="Prevent & Repair" class="product-image main-img">
+          <img src="van.jpg" alt="Prevent & Repair" class="product-image hover-img">
+          <h4>PREVENT, CORRECT & REPAIR</h4>
+          <p>Super-Antiage face · Medical skin care</p>
+          <span class="price">$30.000 COP</span>
+          <button class="add-to-cart" onclick="addToCart('Prevent, Correct & Repair', 30000)">Añadir al carrito</button>
+        </div>
+      
+        <div class="product">
+          <div class="discount">-25%</div>
+          <img src="3. radiance y correct.jpg" alt="Protect & Correct" class="product-image main-img">
+          <img src="3. radiance y correct-hover.jpg" alt="Protect & Correct" class="product-image hover-img">
+          <h4>PROTECT & CORRECT</h4>
+          <p>The protective skin’s telomeres and DNA</p>
+          <span class="price">$15.000 COP</span>
+          <button class="add-to-cart" onclick="addToCart('Protect & Correct', 15000)">Añadir al carrito</button>
+        </div>
+      
+        <div class="product">
+          <div class="discount">-20%</div>
+          <img src="4._hidratation.png" alt="Hydration Boost" class="product-image main-img">
+          <img src="4._hidratation-hover.png" alt="Hydration Boost" class="product-image hover-img">
+          <h4>HYDRATION BOOST</h4>
+          <p>Deep hydration for glowing skin</p>
+          <span class="price">$20.000 COP</span>
+          <button class="add-to-cart" onclick="addToCart('Hydration Boost', 20000)">Añadir al carrito</button>
+        </div>
+      
+        <div class="product">
+          <div class="discount">-15%</div>
+          <img src="5._anti_agin.png" alt="Anti-Aging Serum" class="product-image main-img">
+          <img src="5._anti_agin-hover.png" alt="Anti-Aging Serum" class="product-image hover-img">
+          <h4>ANTI-AGING SERUM</h4>
+          <p>Reduces wrinkles and fine lines</p>
+          <span class="price">$15.000 COP</span>
+          <button class="add-to-cart" onclick="addToCart('Anti-Aging Serum', 15000)">Añadir al carrito</button>
+        </div>
+      
+        <div class="product">
+          <div class="discount">-10%</div>
+          <img src="6. revitalizing.jpg" alt="Revitalizing Mask" class="product-image main-img">
+          <img src="6. revitalizing-hover.jpg" alt="Revitalizing Mask" class="product-image hover-img">
+          <h4>REVITALIZING MASK</h4>
+          <p>Refreshes and revitalizes tired skin</p>
+          <span class="price">$15.000 COP</span>
+          <button class="add-to-cart" onclick="addToCart('Revitalizing Mask', 15000)">Añadir al carrito</button>
+        </div>
+      
+        <div class="product">
+          <div class="discount">-30%</div>
+          <img src="7._eye_cream.png" alt="Eye Cream" class="product-image main-img">
+          <img src="7._eye_cream-hover.png" alt="Eye Cream" class="product-image hover-img">
+          <h4>EYE CREAM</h4>
+          <p>Brightens and reduces puffiness</p>
+          <span class="price">$15.000 COP</span>
+          <button class="add-to-cart" onclick="addToCart('Eye Cream', 15000)">Añadir al carrito</button>
+        </div>
+      
+        <div class="product">
+          <div class="discount">-25%</div>
+          <img src="8._body_lotion.png" alt="Body Lotion" class="product-image main-img">
+          <img src="8._body_lotion-hover.png" alt="Body Lotion" class="product-image hover-img">
+          <h4>BODY LOTION</h4>
+          <p>Softens and nourishes skin</p>
+          <span class="price">$15.000 COP</span>
+          <button class="add-to-cart" onclick="addToCart('Body Lotion', 15000)">Añadir al carrito</button>
+        </div>
+      
+        <div class="product">
+          <div class="discount">-15%</div>
+          <img src="9._facial_toner.png" alt="Facial Toner" class="product-image main-img">
+          <img src="9._facial_toner-hover.png" alt="Facial Toner" class="product-image hover-img">
+          <h4>FACIAL TONER</h4>
+          <p>Cleans and tightens pores</p>
+          <span class="price">$15.000 COP</span>
+          <button class="add-to-cart" onclick="addToCart('Facial Toner', 15000)">Añadir al carrito</button>
+        </div>
+      </div>
+      
+      
+  </main>
+
+  <!-- Botón de Chatbox flotante -->
+  <div id="whatsapp-chat" class="whatsapp-chat">
+    <button id="whatsapp-btn" title="Hablar por WhatsApp">
+    <img src="whats2.png" alt="WhatsApp">
+    </button>
+  </div>
+
+
+
+<!-- HTML para la sección de sellos antes del footer -->
+<section class="product-seals">
+  <div class="container">
+    <div class="seal">
+      <img src="cruelty bg.png" alt="Cruelty Free" aria-label="Cruelty Free">
+      <p>Cruelty Free</p>
+    </div>
+    <div class="seal">
+      <img src="vegan bg.png" alt="Vegan" aria-label="Vegan">
+      <p>Vegan</p>
+    </div>
+    <div class="seal">
+      <img src="perfume bg.png" alt="No Perfume" aria-label="No Perfume">
+      <p>No Perfume</p>
+    </div>
+    <div class="seal">
+      <img src="bottle bg.png" alt="Airless Bottles" aria-label="Airless Bottles">
+      <p>Airless Bottles</p>
+    </div>
+    <div class="seal">
+      <img src="paraben bg.png" alt="Paraben Free" aria-label="Paraben Free">
+      <p>Paraben Free</p>
+    </div>
+    <div class="seal">
+      <img src="sulfate bgg.png" alt="Sulfate Free" aria-label="Sulfate Free">
+      <p>Sulfate Free</p>
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <!-- Suscripción -->
+    <div class="footer-section subscribe-section">
+      <h3>VIVIAN JIMENEZ</h3>
+      <p>Recibe ofertas exclusivas, tips y novedades semanales.</p>
+      <input type="email" placeholder="Ingresa tu E-mail" class="email-input" />
+      <select class="birthday-select">
+        <option>¿Cuál es tu mes de cumpleaños?</option>
+        <option>Enero</option>
+        <option>Febrero</option>
+        <option>Marzo</option>
+        <option>Abril</option>
+        <option>Mayo</option>
+        <option>Junio</option>
+        <option>Julio</option>
+        <option>Agosto</option>
+        <option>Septiembre</option>
+        <option>Octubre</option>
+        <option>Noviembre</option>
+        <option>Diciembre</option>
+      </select>
+      <button class="subscribe-btn">¡SUSCRIBIRME!</button>
+      <p class="policy-text">Al hacer click aceptas nuestra <a href="#">política de datos</a></p>
+    </div>
+
+    <!-- Tiendas y Políticas -->
+    <div class="footer-section links-section">
+      <div class="links-column">
+        <h4>Tiendas</h4>
+        <ul>
+          <li><a href="#">Colombia</a></li>
+          <li><a href="#">Dubai</a></li>
+          <li><a href="#">Marruecos</a></li>
+        </ul>
+      </div>
+      <div class="links-column">
+        <h4>Políticas</h4>
+        <ul>
+          <li><a href="#">Términos y condiciones</a></li>
+          <li><a href="#">Tratamiento de datos</a></li>
+          <li><a href="#">Envíos y devoluciones</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Contacto y Conócenos -->
+    <div class="footer-section contact-section">
+      <h4>Contáctanos</h4>
+      <p>WhatsApp: (+57) 312 5918453</p>
+      <p><a href="mailto:support@vivianjimenez.com">support@vivianjimenez.com</a></p>
+      <p><a href="mailto:marketing@vivianjimenez.com">marketing@vivianjimenez.com</a></p>
+      <p><a href="#">Asesoría personalizada</a></p>
+    </div>
+
+    <!-- Redes sociales -->
+    <!-- Contenedor de redes sociales -->
+<div class="redes-sociales">
+  <!-- Instagram -->
+  <a href="https://www.instagram.com/tuusuario" target="_blank">
+    <i class="fa-brands fa-instagram"></i>
+  </a>
+
+  <!-- Facebook -->
+  <a href="https://www.facebook.com/tuusuario" target="_blank">
+    <i class="fa-brands fa-facebook"></i>
+  </a>
+
+  <!-- TikTok -->
+  <a href="https://www.tiktok.com/@tuusuario" target="_blank">
+    <i class="fa-brands fa-tiktok"></i>
+  </a>
+</div>
+
+
+  <!-- Derechos -->
+  <div class="footer-bottom">
+    <p>&copy; 2024 Vivian jimenez inc. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+  <script src="cosmetico.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+
+</body>
+</html>
